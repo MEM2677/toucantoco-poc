@@ -284,3 +284,9 @@ INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('COPYRIGHT','en'
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('COPYRIGHT','it','Copyright &copy; Mia Azienda AAAA');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PORTAL_TITLE','en','My Portal');
 INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('PORTAL_TITLE','it','Il Mio Portale');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('jptoucantoco_CONNECTOR_NAME','en','Toucan username');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('jptoucantoco_CONNECTOR_NAME','it','Nome utente Toucan');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('jptoucantoco_CONNECTOR_TOKEN','en','Token');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('jptoucantoco_CONNECTOR_TOKEN','it','Token');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('jptoucantoco_CONNECTOR_URL','en','Configured URL');
+INSERT INTO localstrings (keycode,langcode,stringvalue) VALUES ('jptoucantoco_CONNECTOR_URL','it','URL configurato');

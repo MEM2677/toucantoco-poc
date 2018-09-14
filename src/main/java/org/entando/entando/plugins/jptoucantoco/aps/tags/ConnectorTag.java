@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
 
-import org.entando.entando.plugins.jptoucantoco.aps.system.services.connector.Connector;
+import org.entando.entando.plugins.jptoucantoco.aps.system.model.TokenInfo;
 import org.entando.entando.plugins.jptoucantoco.aps.system.utils.JWTUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,13 +32,15 @@ public class ConnectorTag extends TagSupport {
 			ApsProperties widgetConfig = widget.getConfig();
 			String username = widgetConfig.getProperty("username");
 			String secret = widgetConfig.getProperty("secret");
+			String url = widgetConfig.getProperty("url");
 
-			Connector connector = new Connector();
+			TokenInfo tokenInfo = new TokenInfo();
 			String token = JWTUtil.generateToucanTocoJWT(secret, username);
-			connector.setName(token);
-			connector.setId(2677);
+			tokenInfo.setToken(token);
+			tokenInfo.setUser(username);
+			tokenInfo.setUrl(url);
 			
-			this.pageContext.setAttribute(this.getVar(), connector);
+			this.pageContext.setAttribute(this.getVar(), tokenInfo);
 		} catch (Throwable t) {
 			_logger.error("Error in doStartTag", t);
 			throw new JspException("Error in ConnectorTag doStartTag", t);

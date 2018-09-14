@@ -3,11 +3,11 @@
 	<code>jptoucantoco</code>
 	<description>Connector</description>
 	<installation>
-		<tableMapping>
-			<datasource name="servDataSource">
-				<class>org.entando.entando.plugins.jptoucantoco.aps.system.init.servdb.Connector</class>
-			</datasource>
-		</tableMapping>
+<!-- 		<tableMapping> -->
+<!-- 			<datasource name="servDataSource"> -->
+<!-- 				<class>org.entando.entando.plugins.jptoucantoco.aps.system.init.servdb.Connector</class> -->
+<!-- 			</datasource> -->
+<!-- 		</tableMapping> -->
 		<environment code="production">
 			<defaultSqlResources>
 				<datasource name="portDataSource">
