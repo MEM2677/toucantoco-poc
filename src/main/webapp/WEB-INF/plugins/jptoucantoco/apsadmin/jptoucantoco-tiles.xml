@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <definition extends="layout.default" name="jptoucantoco.admin.Connector.list">
+		<put-attribute name="title" value="jptoucantoco.title.connectorManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jptoucantoco/apsadmin/jsp/connector/connector-list.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jptoucantoco/apsadmin/jsp/common/layouts/assets-more/connector-list-extras.jsp"/>
+	</definition>
+    <definition extends="layout.default" name="jptoucantoco.admin.Connector.entry">
+		<put-attribute name="title" value="jptoucantoco.title.connectorManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jptoucantoco/apsadmin/jsp/connector/connector-entry.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jptoucantoco/apsadmin/jsp/common/layouts/assets-more/connector-entry-extras.jsp"/>
+	</definition>
+    <definition extends="layout.default" name="jptoucantoco.admin.Connector.trash">
+		<put-attribute name="title" value="jptoucantoco.title.connectorManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jptoucantoco/apsadmin/jsp/connector/connector-trash.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jptoucantoco/apsadmin/jsp/common/layouts/assets-more/connector-trash-extras.jsp"/>
+	</definition>
+
+    <definition extends="layout.default" name="jptoucantoco.admin.page.widget.Connector.entry">
+		<put-attribute name="title" value="jptoucantoco.title.connectorManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jptoucantoco/apsadmin/jsp/portal/specialwidget/connector/connector-config.jsp" />
+	</definition>
+
+</tiles-definitions>
+
+
