@@ -1,0 +1,23 @@
+{
+  "baseDir" : "C:\\Users\\super\\workspace\\testing\\toucantoco\\tmp",
+  "permission" : "superuser",
+  "packageName" : "org.entando.entando.plugins.jptoucantoco",
+  "model" : {
+    "name" : "Connector",
+    "fields" : [ {
+      "name" : "name",
+      "type" : "string",
+      "required" : true,
+      "length" : null,
+      "primaryKey" : false
+    }]
+  },
+  "assets" : {
+    "rest" : false,
+    "cxf" : false,
+    "specialWidget" : true,
+    "internalServlet" : false,
+    "adminConsole" : false,
+    "adminConsoleProducer" : null
+  }
+}
