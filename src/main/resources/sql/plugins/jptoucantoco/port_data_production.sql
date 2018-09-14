@@ -4,7 +4,6 @@ INSERT INTO widgetcatalog (code, titles, parameters, plugincode, parenttypecode,
 <property key="en">Tocuan Toco Connector</property>
 <property key="it">Connectore Tocuan Toco</property>
 </properties>', '<config>
-	<parameter name="id">id</parameter>
 	<parameter name="secret">secret</parameter>
 	<parameter name="username">username</parameter>
 	<parameter name="url">url</parameter>

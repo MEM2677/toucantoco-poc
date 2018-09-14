@@ -6,7 +6,6 @@
 <article>
 <c:choose>
 	<c:when test="${not empty connector}">
-	<h1><wp:i18n key="jptoucantoco_CONNECTOR_ID" />: <c:out value="${connector.id}" /></h1>
 	<ul>
 		<li>
 			<wp:i18n key="jptoucantoco_CONNECTOR_NAME" />: <c:out value="${connector.name}" /><br />

@@ -10,7 +10,6 @@
 
 	<bean id="jptoucantocoConnectorConfigAction" class="org.entando.entando.plugins.jptoucantoco.apsadmin.portal.specialwidget.connector.ConnectorConfigAction"
 		parent="simpleWidgetAction" scope="prototype">
-		<property name="connectorManager" ref="jptoucantocoConnectorManager" />
 	</bean>
 
  	

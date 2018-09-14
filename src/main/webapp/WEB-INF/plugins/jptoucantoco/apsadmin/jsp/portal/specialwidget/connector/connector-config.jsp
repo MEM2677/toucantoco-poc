@@ -54,9 +54,6 @@
 		<div class="form-group margin-base-top">
 			<div class="col-xs-12">
 				<div class="input-group">
-					<label for="<s:property value="id" />"><s:text name="label.id"/></label>
-					<wpsf:select list="connectorsId" name="id" id="id" cssClass="form-control" />
-					
 					<label for="<s:property value="secret" />"><s:text name="label.secret"/></label>
 					<wpsf:textfield name="secret" id="secret_id_cfg" cssClass="form-control"/>
 					

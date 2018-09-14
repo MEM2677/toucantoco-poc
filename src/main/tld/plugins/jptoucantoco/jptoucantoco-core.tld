@@ -5,31 +5,12 @@
   <tlib-version>2.2</tlib-version>
   <short-name>jptoucantoco</short-name>
   <uri>/jptoucantoco-core</uri>
-	
-	<tag>
-		<description>Loads and returns the list of the Connectors available in the system.</description>
-		<name>connectors</name>
-		<tag-class>org.entando.entando.plugins.jptoucantoco.aps.tags.ConnectorListTag</tag-class>
-		<body-content>empty</body-content>
-		<attribute>
-			<description>The name of the variable setted in the pagecontext.</description>
-			<name>var</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-	</tag>
 
 	<tag>
 		<description>Loads and returns an Connector given a key.</description>
 		<name>connector</name>
 		<tag-class>org.entando.entando.plugins.jptoucantoco.aps.tags.ConnectorTag</tag-class>
 		<body-content>empty</body-content>
-		<attribute>
-			<description>Identifier of the Connector to load</description>
-			<name>key</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
 		<attribute>
 			<description>The name of the variable setted in the pagecontext.</description>
 			<name>var</name>

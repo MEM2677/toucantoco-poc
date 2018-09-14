@@ -8,38 +8,36 @@ package org.entando.entando.plugins.jptoucantoco.aps.tags;
 import javax.servlet.ServletRequest;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.TagSupport;
-import com.agiletec.aps.system.services.page.Widget;
-import com.agiletec.aps.util.ApsProperties;
-import com.agiletec.aps.system.SystemConstants;
+
+import org.entando.entando.plugins.jptoucantoco.aps.system.services.connector.Connector;
+import org.entando.entando.plugins.jptoucantoco.aps.system.utils.JWTUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import com.agiletec.aps.system.RequestContext;
-import com.agiletec.aps.util.ApsWebApplicationUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.entando.entando.plugins.jptoucantoco.aps.system.services.connector.IConnectorManager;
-import org.entando.entando.plugins.jptoucantoco.aps.system.services.connector.Connector;
+import com.agiletec.aps.system.SystemConstants;
+import com.agiletec.aps.system.services.page.Widget;
+import com.agiletec.aps.util.ApsProperties;
 
 public class ConnectorTag extends TagSupport {
 
 	private static final Logger _logger =  LoggerFactory.getLogger(ConnectorTag.class);
-	
+
 	@Override
 	public int doStartTag() throws JspException {
 		ServletRequest request =  this.pageContext.getRequest();
-		IConnectorManager connectorManager = (IConnectorManager) ApsWebApplicationUtils.getBean("jptoucantocoConnectorManager", this.pageContext);
 		RequestContext reqCtx = (RequestContext) request.getAttribute(RequestContext.REQCTX);
 		try {
-		Connector connector = null;
-			if (null != this.getKey()) {
-				connector = connectorManager.getConnector(this.getKey());
-			} else {
-				Widget widget = this.extractWidget(reqCtx);
-				ApsProperties widgetConfig = widget.getConfig();
-				String varid = widgetConfig.getProperty("id");
-				if (StringUtils.isNotBlank(varid)) {
-					connector = connectorManager.getConnector(new Integer(varid));
-				}
-			}
+			Widget widget = this.extractWidget(reqCtx);
+			ApsProperties widgetConfig = widget.getConfig();
+			String username = widgetConfig.getProperty("username");
+			String secret = widgetConfig.getProperty("secret");
+
+			Connector connector = new Connector();
+			String token = JWTUtil.generateToucanTocoJWT(secret, username);
+			connector.setName(token);
+			connector.setId(2677);
+			
 			this.pageContext.setAttribute(this.getVar(), connector);
 		} catch (Throwable t) {
 			_logger.error("Error in doStartTag", t);

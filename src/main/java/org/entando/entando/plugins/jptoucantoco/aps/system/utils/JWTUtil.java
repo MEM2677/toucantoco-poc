@@ -1,4 +1,4 @@
-package com.toucantoco.test.aps.system.services.utils;
+package org.entando.entando.plugins.jptoucantoco.aps.system.utils;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
