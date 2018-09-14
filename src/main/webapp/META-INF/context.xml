@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context path="/toucantoco" docBase="./toucantoco" debug="1" reloadable="false">
+
+    <Environment name="logActiveFileOutput" value="true" type="java.lang.String" override="false" />
+    <Environment name="logName" value="toucantoco" type="java.lang.String" override="false" />
+    <Environment name="logFilePrefix" value="C:\\Users\\super\\workspace\\testing\\toucantoco\\target\\log_toucantoco" type="java.lang.String" override="false" />
+    <Environment name="logLevel" value="INFO" type="java.lang.String" override="false" />
+    <Environment name="logFileSize" value="200000" type="java.lang.String" override="false" />
+    <Environment name="logFilesCount" value="10" type="java.lang.String" override="false" />
+
+    <Environment name="configVersion" value="production" type="java.lang.String" override="false" />
+
+    <Environment name="applicationBaseURL" value="http://localhost:8080/toucantoco/" type="java.lang.String" override="false" />
+    <Environment name="resourceRootURL" value="/toucantoco/resources/" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceRootURL" value="/toucantoco/protected/" type="java.lang.String" override="false" />
+
+    <Environment name="resourceDiskRootFolder" value="C:\\Users\\super\\workspace\\testing\\toucantoco\\src\\main\\webapp\\resources" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceDiskRootFolder" value="C:\\Users\\super\\workspace\\testing\\toucantoco\\src\\main\\webapp\\protected" type="java.lang.String" override="false" />
+
+    <Environment name="indexDiskRootFolder" value="C:\\Users\\super\\workspace\\testing\\toucantoco\\target\\temp\\indexdir" type="java.lang.String" override="false" />
+    
+    <Environment name="portDataSourceClassName" value="org.apache.derby.jdbc.EmbeddedDriver" type="java.lang.String" override="false" />
+    <Environment name="servDataSourceClassName" value="org.apache.derby.jdbc.EmbeddedDriver" type="java.lang.String" override="false" />
+	
+    <Resource name="jdbc/portDataSource" auth="Container"
+              type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+              maxActive="8" maxIdle="4"
+              username="agile" password="agile"
+              url="jdbc:derby:C:\\Users\\super\\workspace\\testing\\toucantoco\\target/derby/production/toucantocoPort;create=true" />
+
+    <Resource name="jdbc/servDataSource" auth="Container"
+              type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.EmbeddedDriver"
+              maxActive="8" maxIdle="4"
+              username="agile" password="agile"
+              url="jdbc:derby:C:\\Users\\super\\workspace\\testing\\toucantoco\\target/derby/production/toucantocoServ;create=true" />
+
+</Context>

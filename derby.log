@@ -1,0 +1,20 @@
+----------------------------------------------------------------
+Fri Sep 14 19:49:55 CEST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a816c00e-0165-d934-1bc0-000041a86718 
+on database directory C:\Users\super\workspace\testing\toucantoco\target\derby\production\toucantocoPort  with class loader ClassRealm[plugin>org.eclipse.jetty:jetty-maven-plugin:9.2.11.v20150529, parent: sun.misc.Launcher$AppClassLoader@5c647e05] 
+Loaded from file:/C:/Users/super/.m2/repository/org/apache/derby/derby/10.9.1.0/derby-10.9.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_172-b11
+user.dir=C:\Users\super\workspace\testing\toucantoco
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Sep 14 19:49:58 CEST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a094c023-0165-d934-1bc0-000041a86718 
+on database directory C:\Users\super\workspace\testing\toucantoco\target\derby\production\toucantocoServ  with class loader ClassRealm[plugin>org.eclipse.jetty:jetty-maven-plugin:9.2.11.v20150529, parent: sun.misc.Launcher$AppClassLoader@5c647e05] 
+Loaded from file:/C:/Users/super/.m2/repository/org/apache/derby/derby/10.9.1.0/derby-10.9.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_172-b11
+user.dir=C:\Users\super\workspace\testing\toucantoco
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
