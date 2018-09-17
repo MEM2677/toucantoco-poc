@@ -25,7 +25,7 @@
 			</ul>		
 		</c:if>
 		<iframe
-			src="${tokenInfoVar.url}?token=${tokenInfoVar.token}&username=${tokenInfoVar.user}" width="1000" height="500">
+			src="${tokenInfoVar.url}?token=${tokenInfoVar.token}&username=${tokenInfoVar.user}" >
 		</iframe>
 	</c:when>
 	<c:otherwise>
@@ -35,3 +35,10 @@
 	</c:otherwise>
 </c:choose>
 </article>
+
+<style>
+iframe {
+   width:100%;
+   height:500px;
+}
+</style>
