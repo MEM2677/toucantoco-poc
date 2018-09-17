@@ -6,21 +6,24 @@
 <article>
 <c:choose>
 	<c:when test="${not empty tokenInfoVar}">
-		<ul>
-			<li>
-				<wp:i18n key="jptoucantoco_CONNECTOR_NAME" />:
-				</br>
-				<b><c:out value="${tokenInfoVar.user}" /></b>
-				<br />
-				<wp:i18n key="jptoucantoco_CONNECTOR_TOKEN" />:
-				</br>
-				<b><c:out value="${tokenInfoVar.token}" /></b>
-				<br />
-				<wp:i18n key="jptoucantoco_CONNECTOR_URL" />:
-				</br>
-				<b><c:out value="${tokenInfoVar.url}" /></b><br />
-			</li>
-		</ul>
+		<wp:currentWidget param="config" configParam="debug" var="debugVar"/>
+		<c:if test="${debugVar}">
+			<ul>
+				<li>
+					<wp:i18n key="jptoucantoco_CONNECTOR_NAME" />:
+					</br>
+					<b><c:out value="${tokenInfoVar.user}" /></b>
+					<br />
+					<wp:i18n key="jptoucantoco_CONNECTOR_TOKEN" />:
+					</br>
+					<b><c:out value="${tokenInfoVar.token}" /></b>
+					<br />
+					<wp:i18n key="jptoucantoco_CONNECTOR_URL" />:
+					</br>
+					<b><c:out value="${tokenInfoVar.url}" /></b><br />
+				</li>
+			</ul>		
+		</c:if>
 		<iframe
 			src="${tokenInfoVar.url}?token=${tokenInfoVar.token}&username=${tokenInfoVar.user}" width="1000" height="500">
 		</iframe>

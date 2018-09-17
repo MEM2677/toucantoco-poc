@@ -129,5 +129,6 @@ INSERT INTO widgetcatalog (code,titles,parameters,plugincode,parenttypecode,defa
 	<parameter name="secret">secret</parameter>
 	<parameter name="username">username</parameter>
 	<parameter name="url">url</parameter>
+	<parameter name="debug">true</parameter>
 	<action name="jptoucantocoConnectorConfig"/>
 </config>','jptoucantoco',NULL,NULL,1,'free');

@@ -56,13 +56,16 @@
 				<div class="input-group">
 					<label for="<s:property value="secret" />"><s:text name="label.secret"/></label>
 					<wpsf:textfield name="secret" id="secret_id_cfg" cssClass="form-control"/>
-					
+					<br />
 					<label for="<s:property value="username" />"><s:text name="label.username"/></label>
 					<wpsf:textfield name="username" id="username_id_cfg" cssClass="form-control"/>
-					
+					<br />
 					<label for="<s:property value="url" />"><s:text name="label.url"/></label>
 					<wpsf:textfield name="url" id="url_id_cfg" cssClass="form-control"/>
-					
+					<br />
+					<label for="<s:property value="debug" />"><s:text name="label.debug"/></label>
+					<wpsf:checkbox name="debug" id="debug_id_cfg" cssClass="form-control"/>
+					<br />
 					<span class="input-group-btn">
 						<wpsf:submit type="button" cssClass="btn btn-success">
 							<span class="icon fa fa-check"></span>&#32;

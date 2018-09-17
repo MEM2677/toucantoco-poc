@@ -21,6 +21,7 @@ public class ConnectorConfigAction extends SimpleWidgetConfigAction {
 		String secret = this.getWidget().getConfig().getProperty("secret");
 		String username = this.getWidget().getConfig().getProperty("username");
 		String url = this.getWidget().getConfig().getProperty("url");
+		String debug = this.getWidget().getConfig().getProperty("debug");
 		
 		if (StringUtils.isNotBlank(id)) {
 			this.setId(new Integer(id));
@@ -33,6 +34,11 @@ public class ConnectorConfigAction extends SimpleWidgetConfigAction {
 		}
 		if (StringUtils.isNotBlank(url)) {
 			this.setUrl(url);
+		}
+		if (StringUtils.isNotBlank(debug)) {
+			this.setDebug(Boolean.valueOf(debug));
+		} else {
+			this.setDebug(false);
 		}
 		return result;
 	}
@@ -68,9 +74,17 @@ public class ConnectorConfigAction extends SimpleWidgetConfigAction {
 		this._url = url;
 	}
 
+	public boolean isDebug() {
+		return _debug;
+	}
+
+	public void setDebug(boolean debug) {
+		this._debug = debug;
+	}
+
 	private int _id;
 	private String _secret;
 	private String _username;
 	private String _url;
+	private boolean _debug;
 }
-
